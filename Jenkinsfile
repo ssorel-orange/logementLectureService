@@ -19,7 +19,7 @@ pipeline {
            steps {
                 sh "pwd"
                 sh "ls -a"
-                sh "docker run -d -p 9092:9091 --name logement_lecture_service logement_service:${env.BUILD_ID}"
+                sh "docker run -d -p 9092:9091 --name logement_lecture_service_${env.BUILD_ID} logement_service:${env.BUILD_ID}"
             }
             
         }
