@@ -15,8 +15,8 @@ import javax.persistence.Id;
 @Entity
 public class Logement {
     @Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer idLogement;
+	//@GeneratedValue(strategy=GenerationType.AUTO)
+	private String idLogement;
 	
 	private Integer idLieu;
 	
@@ -24,7 +24,7 @@ public class Logement {
 	
 	private Integer prix;
 
-	public Logement(Integer idLogement, Integer idLieu, String description, Integer prix) {
+	public Logement(String idLogement, Integer idLieu, String description, Integer prix) {
 		super();
 		this.idLogement = idLogement;
 		this.idLieu = idLieu;
@@ -32,13 +32,16 @@ public class Logement {
 		this.prix = prix;
 	}
 
-	public Integer getIdLogement() {
+
+	public String getIdLogement() {
 		return idLogement;
 	}
 
-	public void setIdLogement(Integer idLogement) {
+
+	public void setIdLogement(String idLogement) {
 		this.idLogement = idLogement;
 	}
+
 
 	public Integer getIdLieu() {
 		return idLieu;
