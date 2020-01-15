@@ -15,6 +15,14 @@ pipeline {
             }
             
         }
+        stage('Launch Application'){
+           steps {
+                sh "pwd"
+                sh "ls -a"
+                sh "docker run -d -p 9092:9091 --name logement_lecture_service logement_service:latest"
+            }
+            
+        }
     }
 }
 
