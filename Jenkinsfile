@@ -10,7 +10,7 @@ pipeline {
            steps {
                 sh "pwd"
                 sh "ls -a"
-                sh "docker build ./LogementService_Pipeline -t logement_service:${env.BUILD_ID}"
+                sh "docker build ./ -t logement_service:${env.BUILD_ID}"
             }
             
         }
